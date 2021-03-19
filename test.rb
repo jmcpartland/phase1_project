@@ -9,11 +9,13 @@ responses = Net::HTTP.get(teamsUri)
 json = JSON.parse(responses)
 
 team = json["teams"]
-# team[3]["name"]
+# division = json[team]
 
-teamList = team.each do |t| 
-    puts t["name"]
-end    
+team[0]["division"]["name"]
+
+
+
+teamList = team.map {|t| t["name"]}
 
 # puts json.values[1][0]
 
@@ -33,8 +35,7 @@ end
 
 
 
-# teamList = team.each do |t| 
-#     puts t["name"]
-# end    
+# teamList = team.map {|t| t["name"]}
+    
 
 binding.pry
