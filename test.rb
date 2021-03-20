@@ -11,9 +11,8 @@ json = JSON.parse(responses)
 team = json["teams"]
 # division = json[team]
 
-team[0]["division"]["name"]
-
-
+# team[0]["division"]["name"]
+team["division"]["name"].select == "MassMutual East"
 
 teamList = team.map {|t| t["name"]}
 

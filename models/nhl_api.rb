@@ -1,21 +1,10 @@
-require_relative '../config/environment.rb'
-
 class NHL_Api
     attr_reader :response
 
-    # TeamSearch.new.division
-
     def initialize
-        
-        url = "https://statsapi.web.nhl.com/api/v1/divisions"
+        url = "https://statsapi.web.nhl.com/api/v1/teams"
         uri = URI.parse(url)
         response = Net::HTTP.get(uri)
-        json = JSON.parse(response)
-        division = json["divisions"]
-        
-        divisionList = division.each do |d| 
-            puts d["name"]
-        end    
+        @response = JSON.parse(response)
     end
-
 end

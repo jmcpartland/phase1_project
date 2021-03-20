@@ -16,7 +16,7 @@ class CLI
 
       nhl = TeamSearch.new.divisions
 
-      input = @prompt.enum_select("Select the division to find your team.", [nhl, "Exit"])
+      input = @prompt.enum_select("Select a division you want to see a list of teams for.", [nhl, "Exit"])
 
       # input = @prompt.enum_select("Select the division to find your team.", ["Discover Central", "Honda West", "MassMutual East", "Scotia North", "Exit"])
       
